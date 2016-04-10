@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Scroll View-->
@@ -134,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Snapshots-->
         <scene sceneID="DL9-YP-goa">
             <objects>
                 <tableViewController id="bEX-by-ouY" customClass="SecondViewController" customModule="ScrollViewSnapshotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,6 +160,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fYQ-y8-tsx" kind="show" identifier="com.mosheberman.show-pdf" id="ouA-Th-vau"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -166,11 +170,44 @@
                             <outlet property="delegate" destination="bEX-by-ouY" id="zcV-lt-42m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tj7-Bp-ph7"/>
+                    <navigationItem key="navigationItem" title="Snapshots" id="tj7-Bp-ph7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pw-Bs-MOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1570" y="379"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="aUI-m7-KFc">
+            <objects>
+                <viewController id="fYQ-y8-tsx" customClass="WebViewController" customModule="ScrollViewSnapshotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gyE-JW-rfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="4BM-fK-EZd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bkm-NF-F7A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="707-f1-2x6">
+                                <rect key="frame" x="20" y="64" width="560" height="472"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="707-f1-2x6" firstAttribute="centerX" secondItem="Bkm-NF-F7A" secondAttribute="centerX" id="FHz-AO-UKf"/>
+                            <constraint firstItem="707-f1-2x6" firstAttribute="top" secondItem="gyE-JW-rfB" secondAttribute="bottom" id="RBp-Nr-RdG"/>
+                            <constraint firstItem="707-f1-2x6" firstAttribute="leading" secondItem="Bkm-NF-F7A" secondAttribute="leadingMargin" id="cvP-B4-gVI"/>
+                            <constraint firstItem="707-f1-2x6" firstAttribute="centerY" secondItem="Bkm-NF-F7A" secondAttribute="centerY" id="sW9-Sz-foQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="707-f1-2x6" id="y7n-Eg-Pxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlL-u4-Rkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234" y="379"/>
         </scene>
         <!--Snapshots-->
         <scene sceneID="rNa-bE-fRE">

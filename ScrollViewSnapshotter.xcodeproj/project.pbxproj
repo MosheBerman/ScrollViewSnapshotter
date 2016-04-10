@@ -16,6 +16,7 @@
 		468832261CBA9A9D00A177E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468832251CBA9A9D00A177E0 /* CustomCell.swift */; };
 		468832281CBAA46100A177E0 /* ScrollViewSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468832271CBAA46100A177E0 /* ScrollViewSnapshotter.swift */; };
 		4688322A1CBB047700A177E0 /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468832291CBB047700A177E0 /* PDFManager.swift */; };
+		4688322C1CBB0D4800A177E0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4688322B1CBB0D4800A177E0 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		468832251CBA9A9D00A177E0 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		468832271CBAA46100A177E0 /* ScrollViewSnapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewSnapshotter.swift; sourceTree = "<group>"; };
 		468832291CBB047700A177E0 /* PDFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
+		4688322B1CBB0D4800A177E0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				468832111CBA97BE00A177E0 /* AppDelegate.swift */,
 				468832131CBA97BE00A177E0 /* FirstViewController.swift */,
 				468832151CBA97BE00A177E0 /* SecondViewController.swift */,
+				4688322B1CBB0D4800A177E0 /* WebViewController.swift */,
 				468832271CBAA46100A177E0 /* ScrollViewSnapshotter.swift */,
 				468832291CBB047700A177E0 /* PDFManager.swift */,
 				468832251CBA9A9D00A177E0 /* CustomCell.swift */,
@@ -151,6 +154,7 @@
 				468832121CBA97BE00A177E0 /* AppDelegate.swift in Sources */,
 				468832261CBA9A9D00A177E0 /* CustomCell.swift in Sources */,
 				468832281CBAA46100A177E0 /* ScrollViewSnapshotter.swift in Sources */,
+				4688322C1CBB0D4800A177E0 /* WebViewController.swift in Sources */,
 				4688322A1CBB047700A177E0 /* PDFManager.swift in Sources */,
 				468832141CBA97BE00A177E0 /* FirstViewController.swift in Sources */,
 			);
