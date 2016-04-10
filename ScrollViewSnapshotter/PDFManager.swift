@@ -16,7 +16,7 @@ class PDFManager: NSObject {
         
         let documentsDirectory = self.documentsDirectory()
         
-        let path = documentsDirectory.stringByAppendingString("/\(NSDate()).pdf")
+        let path = "\(documentsDirectory)/\(NSDate()).pdf"
         
         do {
             try data.writeToFile(path, options: .AtomicWrite)
@@ -54,10 +54,12 @@ class PDFManager: NSObject {
     
     func documentsDirectory() -> String {
         
-        let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, false)
-        let directory = documentsDirectories.first ?? ""
+        let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        if let directory = documentsDirectories.first {
+            return directory
+        }
         
-        return directory
+        return ""
         
     }
 }
