@@ -9,7 +9,9 @@
 import UIKit
 
 class FirstViewController: UIViewController, UICollectionViewDataSource {
-
+  
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,7 +45,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource {
         
         if let imageView = cell.imageView
         {
-            let n = Int(arc4random()) % Int(images.count)
+            let n = indexPath.row % 2
             let imageIndex = images.startIndex.advancedBy(n)
             let imageName = images[imageIndex]
             let image = UIImage(named: imageName)
@@ -51,6 +53,43 @@ class FirstViewController: UIViewController, UICollectionViewDataSource {
         }
         
         return cell
+    }
+    
+    @IBAction func toggleLayoutDirection(sender: AnyObject?) {
+        
+        if let collectionView = self.collectionView,
+            let layout : UICollectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        {
+            let direction : UICollectionViewScrollDirection = layout.scrollDirection
+            
+            if direction == UICollectionViewScrollDirection.Horizontal
+            {
+                layout.scrollDirection = .Vertical
+            }
+            else
+            {
+                layout.scrollDirection = .Horizontal
+            }
+            
+            collectionView.reloadData()
+            collectionView.flashScrollIndicators()
+        }
+    }
+    
+    @IBAction func snapshot(sender: AnyObject?) {
+        
+        if let collectionView = self.collectionView
+        {
+            let snapshotter = ScrollViewSnapshotter()
+            let data = snapshotter.PDFWithScrollView(collectionView)
+        
+            let manager = PDFManager()
+            
+            manager.writeData(data)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("com.mosheberman.pdf-saved", object: nil)
+            
+        }
     }
 
 }
