@@ -29,7 +29,12 @@ class PDFManager: NSObject {
     // MARK: - Reading a PDF
     
     func PDFAtPath(path:String) -> NSData? {
-        return NSData(contentsOfFile: path)
+        
+        let pathToPDF = "\(self.documentsDirectory())/\(path)"
+        
+        let data = NSData(contentsOfFile: pathToPDF)
+        
+        return data
     }
     
     // MARK: - PDFs in a Directory
