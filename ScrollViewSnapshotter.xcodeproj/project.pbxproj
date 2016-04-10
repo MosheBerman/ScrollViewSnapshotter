@@ -13,6 +13,7 @@
 		468832191CBA97BE00A177E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468832171CBA97BE00A177E0 /* Main.storyboard */; };
 		4688321B1CBA97BE00A177E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4688321A1CBA97BE00A177E0 /* Assets.xcassets */; };
 		4688321E1CBA97BE00A177E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4688321C1CBA97BE00A177E0 /* LaunchScreen.storyboard */; };
+		468832261CBA9A9D00A177E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468832251CBA9A9D00A177E0 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4688321A1CBA97BE00A177E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4688321D1CBA97BE00A177E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4688321F1CBA97BE00A177E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468832251CBA9A9D00A177E0 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				468832111CBA97BE00A177E0 /* AppDelegate.swift */,
 				468832131CBA97BE00A177E0 /* FirstViewController.swift */,
 				468832151CBA97BE00A177E0 /* SecondViewController.swift */,
+				468832251CBA9A9D00A177E0 /* CustomCell.swift */,
 				468832171CBA97BE00A177E0 /* Main.storyboard */,
 				4688321A1CBA97BE00A177E0 /* Assets.xcassets */,
 				4688321C1CBA97BE00A177E0 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				468832161CBA97BE00A177E0 /* SecondViewController.swift in Sources */,
 				468832121CBA97BE00A177E0 /* AppDelegate.swift in Sources */,
+				468832261CBA9A9D00A177E0 /* CustomCell.swift in Sources */,
 				468832141CBA97BE00A177E0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
